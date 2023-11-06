@@ -13,7 +13,7 @@
 }
 
 .view:not(.hide) .skinHeader, .skinHeader-withBackground.headroom-scrolling {
-	width: auto;
+	width: 100%;
 	background-image: linear-gradient(black, transparent) !important;
 	background-color: unset !important;
 }
@@ -83,7 +83,7 @@
 }
 
 .view:not(.hide) .section0 .scrollbuttoncontainer:hover > .emby-scrollbuttons-scrollbutton{
-	background-color: rgba(0, 0, 0, .5);
+	background-color: rgba(0, 0, 0, 0.5);
 	transform: scale(.85) !important;
 }
 
@@ -99,12 +99,10 @@
 }
 
 .misty-banner-cover {
-	width: 100%;
+	width: 107%;
 	max-height: 100vh;
 	user-select: none;
 	object-fit: cover;
-	-webkit-mask-image: linear-gradient(to top, transparent 0%, black 30%);
-	mask-image: linear-gradient(to top, transparent 0%, black 30%);
 }
 
 .misty-banner-logo {
@@ -116,12 +114,12 @@
 	transform: translateY(calc(-50% - clamp(-2rem, -3.455rem + 7.27vw, 2rem)));
 	right: calc(3.4% + min(0.72em, max(0.48em, 1.78vw)));
 	opacity: 0;
-	transition: 1s;
-	transition-delay: .8s;
+	transition: 2.5s;
+	transition-delay: 0.8s;
 }
 
 .misty-banner-logo.active {
-	transform: translateY(calc(-100% - clamp(-2rem, -3.455rem + 7.27vw, 2rem)));
+	transform: translateY(calc(50% - clamp(-2rem, -3.455rem + 7.27vw, 2rem)));
 	opacity: 1;
 }
 
@@ -180,6 +178,7 @@
 	position: relative;
 	left: 0;
 	transition: all 1.5s cubic-bezier(0.15, 0.07, 0, 1) 0s;
+	/*margin-bottom: 5em;*/
 }
 
 .misty-banner-item {
@@ -201,7 +200,9 @@
 }
 
 .misty-banner-info > * {
-	transition: all 2.5s cubic-bezier(0, 1.41, 0.36, 0.93) .4s;
+	/*transition: all 2.5s cubic-bezier(0, 1.41, 0.36, 0.93) .4s;*/
+	transition: all 2.5s cubic-bezier(0.71, 0.04, 0, 0.94) .4s;
+	
 	transform: translateY(150%);
 	opacity: 0 !important;
 }
@@ -243,7 +244,7 @@
 	text-overflow: ellipsis; */
 	display: -webkit-box !important;
 	-webkit-box-orient: vertical;
-	-webkit-line-clamp: 2;
+	-webkit-line-clamp: 8;
 	overflow: hidden;
 }
 
@@ -301,6 +302,17 @@
 	opacity: 1 !important;
 }
 
-.misty-banner-library-overflow {
+/*.misty-banner-library-overflow {
 	overflow: visible !important;
 }
+.skinHeader{
+	visibility:hidden;
+}
+
+.itemsContainer{
+	visibility:hidden;
+}
+
+.overflowYScroll {
+    overflow-y: hidden!important;
+}*/
